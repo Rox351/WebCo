@@ -9,5 +9,5 @@ function openFormulario() {
 }
 
 function openPostagem() {
-  window.open('src/docs/postagem-correios.pdf', 'Postagem/Correios', 'width=362,height=615.333');
+  window.open('src/docs/postagem-correios.pdf', 'Postagem/Correios', 'width=584,height=608');
 }
