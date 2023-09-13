@@ -11,3 +11,7 @@ function openFormulario() {
 function openPostagem() {
   window.open('src/docs/postagem-correios.pdf', 'Postagem/Correios', 'width=584,height=608');
 }
+
+function openTransportadora() {
+window.open(this.href, 'Planilha', 'width=515.333,height=494.667'); return false;"
+}
