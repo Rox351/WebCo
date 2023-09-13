@@ -13,5 +13,6 @@ function openPostagem() {
 }
 
 function openTransportadora() {
-window.open(this.href, 'Planilha', 'width=515.333,height=494.667');
+window.open('https://docs.google.com/spreadsheets/d/1IJ6pjwe86F525uJHlr-3StWheA9d8ARxi6LgyxLdSd8/edit#gid=338307967&range=A1:D13' 
+       target="_blank" , 'Planilha', 'width=515.333,height=494.667');
 }
