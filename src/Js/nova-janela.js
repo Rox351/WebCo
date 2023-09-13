@@ -13,5 +13,5 @@ function openPostagem() {
 }
 
 function openTransportadora() {
-window.open(this.href, 'Planilha', 'width=515.333,height=494.667'); return false;"
+window.open(this.href, 'Planilha', 'width=515.333,height=494.667');
 }
