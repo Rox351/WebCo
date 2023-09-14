@@ -114,7 +114,7 @@
 
 <body>
     <form id="form">
-        <label for="motivo">Motivo:</label>
+        <label for="motivo" >Motivo:</label>
         <input type="text" id="motivo" required placeholder="Digite aqui o Motivo e selecione" autocomplete="off">
         <!-- Botão de copiar para o input motivo -->
         <button type="button" class="copy-button" data-input="motivo">Copiar</button>
@@ -424,19 +424,30 @@
             }, duration);
         }
 
-        // Função para atualizar o campo de saída (output)
-        function updateOutput() {
-            const motivo = document.getElementById('motivo').value;
-            const pedido = document.getElementById('pedido').value;
-            const cliente = document.getElementById('cliente').value;
-            const nf = document.getElementById('nf').value;
-            const id = document.getElementById('id').value;
-            const email = document.getElementById('E-mail').value;
-            const telefone = document.getElementById('telefone').value;
+// Adicione um evento de escuta para o campo da NF
+document.getElementById('nf').addEventListener('input', function () {
+    updateOutput(); // Atualize a saída sempre que houver uma alteração no campo da NF
+});
+// Função para atualizar o campo de saída (output)
+function updateOutput() {
+    const motivo = document.getElementById('motivo').value;
+    const pedido = document.getElementById('pedido').value;
+    const cliente = document.getElementById('cliente').value;
+    const nf = document.getElementById('nf').value;
+    const id = document.getElementById('id').value;
+    const email = document.getElementById('E-mail').value;
+    const telefone = document.getElementById('telefone').value;
 
-            const output = `${motivo} - ${pedido} - ${cliente} - NF ${nf} - ID ${id}`;
-            document.getElementById('output').value = output;
-        }
+    let output = `${motivo} - ${pedido} - ${cliente}`;
+
+    // Adicione o campo da NF à saída apenas se houver texto nele
+    if (nf.trim() !== '') {
+        output += ` - NF ${nf}`;
+    }
+
+    output += ` - ID ${id}`;
+    document.getElementById('output').value = output;
+}
 
         const motivoInput = document.getElementById('motivo');
         const motivoList = document.getElementById('motivoList');
