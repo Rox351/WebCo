@@ -15,3 +15,7 @@ function openPostagem() {
 function openTransportadora() {
     window.open('https://docs.google.com/spreadsheets/d/1IJ6pjwe86F525uJHlr-3StWheA9d8ARxi6LgyxLdSd8/edit#gid=338307967&range=A1:D13', '_blank', 'width=515.333,height=494.667');
 }
+
+function openPrazos() {
+    window.open('https://docs.google.com/spreadsheets/d/1aKEv4Dx1EGPKLtjG3_TNAnTVVuiLxZE7/edit#gid=885161008&range=A1:B16', '_blank', 'width=515.333,height=494.667');
+}
